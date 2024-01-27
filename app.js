@@ -8,8 +8,6 @@ const color = document.querySelector(".color")
 function update_doc_color() {
     // get random number between 0 and 3
     const random_num = getRandomNumber();
-    console.log(random_num);
-    console.log(document.body);
 
     // Update the document body/main color
     document.body.style.backgroundColor = colors[random_num];
@@ -22,6 +20,10 @@ function update_doc_color() {
 
 swap_btn.addEventListener("click", update_doc_color);
 
+/**
+ * Rerturn 
+ * @returns integer
+ */
 function getRandomNumber() {
     return Math.floor(Math.random() * colors.length);
 }
